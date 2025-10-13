@@ -10,7 +10,14 @@ public class Circlerotate : MonoBehaviour
     public float speed = 2f;
     private float angle = 0f;
 
+    public float BPM = 120f;
+
     private bool isGo;
+    public bool isDie;
+
+    public AudioSource Audio;
+
+
 
     void Start()
     {
@@ -26,25 +33,38 @@ public class Circlerotate : MonoBehaviour
 
     void Update()
     {
+        if (isDie)
+        {
+            return;
+        }
         if (Input.GetKeyDown(KeyCode.R))
         {
             isGo = true;
+            Audio.Play();
         }
         if (isGo)
         {
-        // A/D로 궤도 바꾸기
-        if (Input.GetKeyDown(KeyCode.A))
-            targetRadius = innerRadius;
-        if (Input.GetKeyDown(KeyCode.D))
-            targetRadius = outerRadius;
+            // A/D로 궤도 바꾸기
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+                targetRadius = innerRadius;
+                
+            }
 
-        // 부드럽게 반지름 보간
-        float radius = Mathf.Lerp(Vector3.Distance(transform.position, center.position), targetRadius, Time.deltaTime * 50f);
+            if (Input.GetKeyDown(KeyCode.D))
+            {
+                targetRadius = outerRadius;
+                
+            }
 
-        angle -= speed * Time.deltaTime;
-        float x = Mathf.Cos(angle) * radius;
-        float y = Mathf.Sin(angle) * radius;
-        transform.position = center.position + new Vector3(x, y, 0);
+
+            // 부드럽게 반지름 보간
+            float radius = Mathf.Lerp(Vector3.Distance(transform.position, center.position), targetRadius, Time.deltaTime * 50f);
+
+            angle -= speed * Time.deltaTime;
+            float x = Mathf.Cos(angle) * radius;
+            float y = Mathf.Sin(angle) * radius;
+            transform.position = center.position + new Vector3(x, y, 0);
         }
 
     }

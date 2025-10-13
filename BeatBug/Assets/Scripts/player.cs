@@ -5,6 +5,10 @@ public class player : MonoBehaviour
     [SerializeField]
     private bool isAttack;
     public Boss Boss;
+    public Circlerotate circlerotate;
+    public GameManager gameManager;
+    public spikeEdier spikeedier;
+
     void Start()
     {
         
@@ -17,6 +21,20 @@ public class player : MonoBehaviour
         {
             Boss.Hit();
         }
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "Eneny")
+        {
+            circlerotate.isDie = true;
+            gameManager.playerDie();
+        }
+        if(collision.tag == "AttackZone")
+        {
+            spikeedier.reset();
+        }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -24,6 +42,7 @@ public class player : MonoBehaviour
         if(collision.tag == "AttackZone")
         {
             isAttack = true;
+            
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -31,6 +50,7 @@ public class player : MonoBehaviour
         if(collision.tag == "AttackZone")
         {
             isAttack = false;
+            
         }
     }
 }
