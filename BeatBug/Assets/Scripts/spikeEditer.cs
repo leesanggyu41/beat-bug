@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.UIElements;
+
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -20,6 +22,7 @@ public class spikeEdier : MonoBehaviour
     public float spawnCooldown = 0.2f; // 0.2초마다만 생성 가능
 
     public GameObject circle;
+    public Transform point;
 
     // SpikeGroup 저장용
     private GameObject currentSpikeGroup;
@@ -59,6 +62,12 @@ public class spikeEdier : MonoBehaviour
         Debug.Log("주파수 초과! 가시 생성");
         // 현재 SpikeGroup의 자식으로 가시 생성
         GameObject gasi = Instantiate(spike, spikeposition.position, spikeposition.rotation, currentSpikeGroup.transform);
+
+        // 가시가 circle 위치를 바라보도록 회전 조정
+        if (circle != null)
+        {
+            gasi.transform.LookAt(point.transform.position);
+        }
     }
 
     public void reset()
