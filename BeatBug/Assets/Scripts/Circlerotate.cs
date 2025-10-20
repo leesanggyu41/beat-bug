@@ -4,7 +4,7 @@ public class Circlerotate : MonoBehaviour
 {
     public float innerRadius = 2f;
     public float outerRadius = 3.5f;
-    private float targetRadius;
+    public float targetRadius;
     public Transform center;
     public float radius = 3f;
     public float speed = 2f;
