@@ -4,6 +4,8 @@ public class Boss : MonoBehaviour
 {
     [SerializeField]
     private Animator BossAnim;
+    [SerializeField]
+    private GameObject[] paturns;
     
     public int Hp;
     void Update()
