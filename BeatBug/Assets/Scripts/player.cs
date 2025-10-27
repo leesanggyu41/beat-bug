@@ -31,10 +31,12 @@ public class player : MonoBehaviour
             circlerotate.isDie = true;
             gameManager.playerDie();
         }
-        if(collision.tag == "AttackZone")
-        {
-            spikeedier.reset();
+
+        if (collision.tag == "AttackZone")
+        { if(spikeedier != null)spikeedier.reset();
+            
         }
+
     }
 
     private void OnTriggerStay2D(Collider2D collision)

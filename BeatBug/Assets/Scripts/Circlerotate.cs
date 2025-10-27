@@ -39,8 +39,7 @@ public class Circlerotate : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.R))
         {
-            isGo = true;
-            Audio.Play();
+            isplay();
         }
         if (isGo)
         {
@@ -56,7 +55,7 @@ public class Circlerotate : MonoBehaviour
                 targetRadius = outerRadius;
                 
             }
-
+            
 
             // 부드럽게 반지름 보간
             float radius = Mathf.Lerp(Vector3.Distance(transform.position, center.position), targetRadius, Time.deltaTime * 50f);
@@ -67,5 +66,15 @@ public class Circlerotate : MonoBehaviour
             transform.position = center.position + new Vector3(x, y, 0);
         }
 
+    }
+
+    public void isplay()
+    {
+        isGo = true;
+        Audio.Play();
+    }
+    public void isplayy()
+    {
+        isGo = true;
     }
 }

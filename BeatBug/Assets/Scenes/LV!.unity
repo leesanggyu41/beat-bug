@@ -392,7 +392,7 @@ MonoBehaviour:
   Boss: {fileID: 826156202}
   circlerotate: {fileID: 83690742}
   gameManager: {fileID: 872396610}
-  spikeedier: {fileID: 872396611}
+  spikeedier: {fileID: 0}
 --- !u!1 &150896207
 GameObject:
   m_ObjectHideFlags: 0
@@ -1399,6 +1399,171 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &564741006
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 564741008}
+  - component: {fileID: 564741007}
+  - component: {fileID: 564741009}
+  - component: {fileID: 564741010}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &564741007
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 564741006}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.0038879812, y: 0.41990066}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.10576755, y: 1.1866221}
+  m_EdgeRadius: 0
+--- !u!4 &564741008
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 564741006}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &564741009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 564741006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d2fa194d008edf46b538794aca07b07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpikePatternManager
+  spikePatterns:
+  - {fileID: 5178283028632241666, guid: dd4bca1b84860ae4d8472da2c531b86e, type: 3}
+  - {fileID: 8021603905756549822, guid: ece8fbcbbddfd6a4cbd451826e0fd820, type: 3}
+  - {fileID: 2265811436640603090, guid: a9d4b657c7360aa4bb5e294bcbe4eef9, type: 3}
+  - {fileID: 2944843753401405481, guid: a8e820d83db1b6f4aa622beeb69876da, type: 3}
+  - {fileID: 2390527900455080114, guid: 240c85eef4d354c4db4351cf7e8b01f2, type: 3}
+  - {fileID: 9005723888416306624, guid: c6fab7c3be8f33e4f9f373a8e70d031e, type: 3}
+  - {fileID: 5625590922807679831, guid: dccbc6c38400e6a438a8f99f6fa2ec32, type: 3}
+  - {fileID: 8304244659448325907, guid: bee2a866c66bb8940a1829e2f612a24d, type: 3}
+  - {fileID: 472879624155683874, guid: b877181f4c4e70c4fb61aba345337165, type: 3}
+  - {fileID: 754478346533322448, guid: 56f4d441ca5dbfe44ab8630d89383149, type: 3}
+  - {fileID: 4264912567390192627, guid: f40f1672cce9d0348b70ad61a69bdf76, type: 3}
+  - {fileID: 860589759436128315, guid: 8d3bcedd2a76dde4ba39f15a296da288, type: 3}
+  - {fileID: 8354016745750904230, guid: b7a46fe587f97c644bc6f2eecc79c016, type: 3}
+  - {fileID: 6387075022566737078, guid: 2837f6a016453e6409742d803fe4884f, type: 3}
+  - {fileID: 5218469748148498555, guid: 38bc6a11ed7bc5148805c02a25f2fa25, type: 3}
+  - {fileID: 2643149545497437639, guid: 85adcc772273a9140bccfe80bcd18aee, type: 3}
+  - {fileID: 1296370400901408470, guid: 4aacffbdcec611945a042bcaf0c7903b, type: 3}
+  - {fileID: 6092331586826315643, guid: a5feb13549fb9a44fbf6ce5bbadcc151, type: 3}
+  - {fileID: 5723057774376373143, guid: 4d361530a2bab794e918c4d53beedcbe, type: 3}
+  - {fileID: 5802834478089965269, guid: 61a30497e7daa7e419a0e270bbb0cb33, type: 3}
+  - {fileID: 6287162321934853530, guid: f65ec991a05af5d4d87a27fba8dd4130, type: 3}
+  - {fileID: 4146740029404035132, guid: e828272d20e29a54e8785eef66ff6b84, type: 3}
+  - {fileID: 3524764504550609217, guid: 07991744125650948a6ce55a7a3e91dd, type: 3}
+  - {fileID: 4221708980974943724, guid: 588e48f8d58840549afade035481d518, type: 3}
+  - {fileID: 4644622430989559435, guid: e3845c85c574766489d464464da2d769, type: 3}
+  - {fileID: 5783227723161549837, guid: a8aee632b05fe394aba33b1c952cb016, type: 3}
+  - {fileID: 5595520227081577427, guid: 97552db2c0fdc58409b54b33bb978830, type: 3}
+  - {fileID: 648436244158309329, guid: bf119e33ea9531e429cfe780527a7cae, type: 3}
+  - {fileID: 5569747022131020120, guid: e41503905a36bcb4892f4161207002fd, type: 3}
+  - {fileID: 706691651138454785, guid: af0aa9ee4c3773d4bbcfd99692c8205e, type: 3}
+  - {fileID: 1320240314416045760, guid: 11b46ae566023b14a97bde169f51c505, type: 3}
+  - {fileID: 6531525599428644222, guid: ee0666d1991d9b942a5b2557691ef740, type: 3}
+  - {fileID: 976464892870958416, guid: 101ce268dd59b004bbcdb9957feb95c8, type: 3}
+  - {fileID: 463449807560697736, guid: 80e1d519457e609459aa557cf64f4d44, type: 3}
+  - {fileID: 8260553222943641767, guid: 1183a359b7d4ddc4ead6e6ba93987a2e, type: 3}
+  - {fileID: 3660552835650516495, guid: 547da465347969c48beecec2ad23dc54, type: 3}
+  - {fileID: 8748757225459734307, guid: 7831214c9f4291340a4de0c5708d3904, type: 3}
+  - {fileID: 6852830480491802163, guid: e5871f0bd9393dd429cda4e97b8d2c9c, type: 3}
+  - {fileID: 2937710707322152061, guid: b27c19a7fc7682348b9b4996dc237da7, type: 3}
+  - {fileID: 5735819555776925172, guid: 1b0f63a1f2b62d24aa392d4581d6be94, type: 3}
+  - {fileID: 1757229370721358422, guid: 2f71af03b2116ee48bc10d5c484cf3d0, type: 3}
+  - {fileID: 6974955007303524847, guid: 6ad6e8deddad10f4986ee442202f2007, type: 3}
+  - {fileID: 4707726060870220659, guid: 3687da3411e4a344a844dcbc7b2b6a98, type: 3}
+  currentIndex: -1
+  spawnPoint: {fileID: 617484363}
+--- !u!50 &564741010
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 564741006}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &617484362
 GameObject:
   m_ObjectHideFlags: 0
@@ -1487,7 +1652,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uC774\uC81C \uC2DC\uC791\uD558\uC9C0."
+  m_text: ' '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bc81b0a047486684fb471a19a4a295bb, type: 2}
   m_sharedMaterial: {fileID: -1617057690347819305, guid: bc81b0a047486684fb471a19a4a295bb, type: 2}
@@ -2075,7 +2240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a1346406296d66419ce3f4a0fd64d13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueManager
-  dialogueUI: {fileID: 0}
+  dialogueUI: {fileID: 1242950777}
 --- !u!4 &860361672
 Transform:
   m_ObjectHideFlags: 0
@@ -2192,7 +2357,6 @@ GameObject:
   - component: {fileID: 872396609}
   - component: {fileID: 872396608}
   - component: {fileID: 872396610}
-  - component: {fileID: 872396611}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -2327,34 +2491,6 @@ MonoBehaviour:
   player: {fileID: 83690741}
   DIeBackGround: {fileID: 1745385467}
   Dieposition: {fileID: 1672565845}
---- !u!114 &872396611
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 872396607}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb15929dcc3127643a87fd33bebbe5a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioSource: {fileID: 872396608}
-  sampleSize: 1024
-  threshold: 1
-  tr: 0
-  Randomm: 0
-  spike:
-  - {fileID: 8191226798160055078, guid: e34f9366e589f404ca99109868914f43, type: 3}
-  - {fileID: 8191226798160055078, guid: b511daa9637672645a0c6a214706a880, type: 3}
-  attackzone: {fileID: 8284392199800411706, guid: dce8efe0d6c3ed147a02b9e18ef5359f, type: 3}
-  spikeposition: {fileID: 83690744}
-  spawnCooldown: 0.2
-  circle: {fileID: 617484362}
-  point: {fileID: 0}
-  newpaturn: {fileID: 170045820128790882, guid: dcb20e05fc600b641bfebd1ee3e82100, type: 3}
-  Player: {fileID: 83690742}
-  selectedFreq: 1
 --- !u!1 &947383960
 GameObject:
   m_ObjectHideFlags: 0
@@ -2632,11 +2768,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38a851e11c02b3e47bd00f6a23866eea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::chatmanager
-  dialoguePanel: {fileID: 0}
-  dialogueText: {fileID: 0}
+  circlerotate: {fileID: 83690742}
+  dialoguePanel: {fileID: 1242950778}
+  dialogueText: {fileID: 647494414}
   fadeDuration: 0.5
   typingSpeed: 0.03
-  dialogueCuts: []
+  dialogueCuts:
+  - dialogueLine: "\uC720\uCDA9\uC778 \uB098\uBCF4\uB2E4\uB3C4 \uC791\uAD70."
+  - dialogueLine: "\uADF8\uB7F0 \uB108\uAC00 \uACFC\uC5F0 \uC9C0\uC0C1\uC5D0\uC11C
+      \uC0B4\uC544\uB0A8\uC744 \uC218 \uC788\uB294\uC9C0 \uC2DC\uD5D8\uD574\uBCF4\uACA0\uB2E4."
+  - dialogueLine: "\uADF8\uB7FC \uC2DC\uC791\uD558\uC9C0."
 --- !u!225 &1242950778
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -4111,3 +4252,4 @@ SceneRoots:
   - {fileID: 6327379014268433181}
   - {fileID: 865588087}
   - {fileID: 860361672}
+  - {fileID: 564741008}

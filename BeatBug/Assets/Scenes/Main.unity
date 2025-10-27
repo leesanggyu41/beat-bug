@@ -264,7 +264,7 @@ MonoBehaviour:
   targetRadius: 0
   center: {fileID: 617484363}
   radius: 2.6
-  speed: 3
+  speed: 2
   BPM: 120
   isDie: 0
   Audio: {fileID: 872396608}
@@ -1886,6 +1886,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BossAnim: {fileID: 826156203}
+  paturns: []
   Hp: 0
 --- !u!95 &826156203
 Animator:
@@ -2029,7 +2030,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: bfd88338b503c0545a49c04c3802994a, type: 3}
+  m_Resource: {fileID: 8300000, guid: 80c3ee364e1a72140a53506f187624bc, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -2167,7 +2168,7 @@ MonoBehaviour:
   - {fileID: 8191226798160055078, guid: b511daa9637672645a0c6a214706a880, type: 3}
   attackzone: {fileID: 8284392199800411706, guid: dce8efe0d6c3ed147a02b9e18ef5359f, type: 3}
   spikeposition: {fileID: 83690744}
-  spawnCooldown: 0.16
+  spawnCooldown: 0.5
   circle: {fileID: 617484362}
   point: {fileID: 0}
   newpaturn: {fileID: 170045820128790882, guid: dcb20e05fc600b641bfebd1ee3e82100, type: 3}

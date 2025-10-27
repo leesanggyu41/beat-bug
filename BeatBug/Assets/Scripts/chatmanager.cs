@@ -5,6 +5,9 @@ using System.Collections.Generic;
 
 public class chatmanager : MonoBehaviour
 {
+    [Header("player")]
+    public Circlerotate circlerotate;
+
     [Header("UI Elements")]
     public CanvasGroup dialoguePanel;
     
@@ -17,7 +20,7 @@ public class chatmanager : MonoBehaviour
     [System.Serializable]
     public class DialogueCut
     {
-        public string speakerName;
+
         [TextArea(2, 5)] public string dialogueLine;
     }
 
@@ -92,5 +95,15 @@ public class chatmanager : MonoBehaviour
     {
         dialoguePanel.DOFade(0, fadeDuration)
             .OnComplete(() => dialoguePanel.gameObject.SetActive(false));
+
+        //이제 게임을 시작하라고 알림
+        Invoke("isppp", 2);
+
+
+    }
+
+    public void isppp()
+    {
+        circlerotate.isplayy();
     }
 }
