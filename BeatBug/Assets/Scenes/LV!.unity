@@ -263,7 +263,7 @@ MonoBehaviour:
   targetRadius: 0
   center: {fileID: 617484363}
   radius: 2.6
-  speed: 3
+  speed: 2
   BPM: 120
   isDie: 0
   Audio: {fileID: 872396608}
@@ -1537,6 +1537,7 @@ MonoBehaviour:
   - {fileID: 4707726060870220659, guid: 3687da3411e4a344a844dcbc7b2b6a98, type: 3}
   currentIndex: -1
   spawnPoint: {fileID: 617484363}
+  bgm: {fileID: 872396608}
 --- !u!50 &564741010
 Rigidbody2D:
   serializedVersion: 5
