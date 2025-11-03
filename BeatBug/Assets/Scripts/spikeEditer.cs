@@ -134,10 +134,13 @@ public class spikeEdier : MonoBehaviour
         Destroy(currentSpikeGroup);
 #endif
 
-        GameObject newPatternInstance = Instantiate(newpaturn, Vector3.zero, Quaternion.identity);
+        Vector3 dir = new Vector3 (0, -2, 0);
+        GameObject newPatternInstance = Instantiate(newpaturn, dir, Quaternion.identity);
         circle = newPatternInstance;
 
         currentSpikeGroup = new GameObject("SpikeGroup");
         currentSpikeGroup.transform.position = circle.transform.position;
+        circle.transform.SetParent(currentSpikeGroup.transform);
+        circle.transform.localPosition = Vector3.zero;
     }
 }

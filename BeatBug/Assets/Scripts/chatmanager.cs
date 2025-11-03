@@ -17,6 +17,8 @@ public class chatmanager : MonoBehaviour
     public float fadeDuration = 0.5f;
     public float typingSpeed = 0.03f;
 
+    public DialogueManager manager;
+
     [System.Serializable]
     public class DialogueCut
     {
@@ -95,6 +97,7 @@ public class chatmanager : MonoBehaviour
     {
         dialoguePanel.DOFade(0, fadeDuration)
             .OnComplete(() => dialoguePanel.gameObject.SetActive(false));
+        manager.chatbool = true;
 
         //이제 게임을 시작하라고 알림
         Invoke("isppp", 2);

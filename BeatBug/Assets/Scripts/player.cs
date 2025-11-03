@@ -19,20 +19,20 @@ public class player : MonoBehaviour
     {
         if(isAttack && Input.GetKeyDown(KeyCode.Space))
         {
-            Boss.Hit();
+            Boss.Hit(1);
         }
 
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Eneny")
+        if (collision.tag == "Eneny")
         {
             circlerotate.isDie = true;
             gameManager.playerDie();
         }
 
-        if (collision.tag == "AttackZone")
+        if (collision.tag == "www")
         { if(spikeedier != null)spikeedier.reset();
             
         }

@@ -1,19 +1,45 @@
 using System.Collections;
 using UnityEngine;
+using TMPro;
+using DG.Tweening;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     [SerializeField]
+    private string Scenename;
+    [SerializeField]
     private GameObject player;
+    [SerializeField]
+    private GameObject animplayer;
+    [SerializeField]
+    private Animator animator;
     [SerializeField]
     private GameObject DIeBackGround;
     [SerializeField]
     private Transform Dieposition;
-    
+    [SerializeField]
+    private TextMeshProUGUI gameovertext;
+    [SerializeField]
+    private GameObject retrytext;
+    [SerializeField]
+    private AudioSource bgm;
+
+    private bool retry = false;
+
+    private void Update()
+    {
+        if(retry && Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(Scenename);
+        }
+    }
+
 
     public void playerDie()
     {
         DIeBackGround.SetActive(true);
+        bgm.Stop();
         StartCoroutine(DieAnim());
     }
 
@@ -36,5 +62,24 @@ public class GameManager : MonoBehaviour
 
         player.transform.position = Dieposition.position;
 
+        yield return new WaitForSeconds(1.5f);
+
+        paidin();
+    }
+
+    public void paidin()
+    {
+        
+        gameovertext.DOFade(1f, 2f);
+        player.SetActive(false);
+        animplayer.SetActive(true);
+        animator.SetBool("Die", true);
+
+        Invoke("wer", 2f);
+    }
+    public void wer()
+    {
+        retrytext.SetActive(true);
+        retry = true;
     }
 }

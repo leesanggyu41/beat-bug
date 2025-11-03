@@ -16,6 +16,7 @@ public class Circlerotate : MonoBehaviour
     public bool isDie;
 
     public AudioSource Audio;
+    public Boss boss;
 
 
 
@@ -33,14 +34,18 @@ public class Circlerotate : MonoBehaviour
 
     void Update()
     {
+        if (boss.isDie)
+        {
+            return;
+        }
         if (isDie)
         {
             return;
         }
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            isplay();
-        }
+        //if (Input.GetKeyDown(KeyCode.R))
+        //{
+        //    isplay();
+        //}
         if (isGo)
         {
             // A/D로 궤도 바꾸기

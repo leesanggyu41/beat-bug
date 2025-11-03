@@ -268,6 +268,7 @@ MonoBehaviour:
   BPM: 120
   isDie: 0
   Audio: {fileID: 872396608}
+  boss: {fileID: 826156202}
 --- !u!212 &83690743
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1887,7 +1888,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BossAnim: {fileID: 826156203}
   paturns: []
-  Hp: 0
+  HPBarParent: {fileID: 0}
+  HPbarSlider: {fileID: 0}
+  maxHp: 10
+  currentHp: 0
+  isDie: 0
 --- !u!95 &826156203
 Animator:
   serializedVersion: 7
@@ -2143,9 +2148,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3198b4c8c9d02ef41921a6b6dee324ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Scenename: 
   player: {fileID: 83690741}
+  animplayer: {fileID: 0}
+  animator: {fileID: 0}
   DIeBackGround: {fileID: 1745385467}
   Dieposition: {fileID: 1672565845}
+  gameovertext: {fileID: 0}
+  retrytext: {fileID: 0}
+  bgm: {fileID: 0}
 --- !u!114 &872396611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2171,7 +2182,7 @@ MonoBehaviour:
   spawnCooldown: 0.5
   circle: {fileID: 617484362}
   point: {fileID: 0}
-  newpaturn: {fileID: 170045820128790882, guid: dcb20e05fc600b641bfebd1ee3e82100, type: 3}
+  newpaturn: {fileID: 7905886111375513478, guid: cfbe2e304f50c3046bc6af60d66cfdba, type: 3}
   Player: {fileID: 83690742}
   selectedFreq: 1
 --- !u!1 &947383960
@@ -3867,7 +3878,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8284392199800411706, guid: dce8efe0d6c3ed147a02b9e18ef5359f, type: 3}
       propertyPath: m_TagString
-      value: AttackZone
+      value: www
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
