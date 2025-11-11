@@ -8,9 +8,8 @@ public class Boss : MonoBehaviour
     [SerializeField]
     private Animator BossAnim;
     [SerializeField]
-    private GameObject[] paturns; // 보스 패턴 오브젝트
-    [SerializeField]
     private GameObject HPBarParent; // HP 바를 포함하는 부모 GameObject
+    public int Lv;
 
     // 이 변수는 Inspector에서 직접 연결하는 것이 좋습니다.
     [SerializeField]
@@ -20,6 +19,13 @@ public class Boss : MonoBehaviour
     public int maxHp = 10;
     public int currentHp; // 변수명을 currentHp로 변경
     public bool isDie = false; // 변수명 isdie를 isDie로 변경
+
+    [Header("스킬")]
+    public float maxCool;
+    public float minCool;
+
+    public Transform point;
+    public GameObject skillOj;
 
     //  체력바 감소 속도 조절용 변수
     private const float HealthBarDecreaseSpeed = 2f;
@@ -59,6 +65,33 @@ public class Boss : MonoBehaviour
         {
             Die();
         }
+
+
+    }
+    public void skillcool()
+    {
+        if(Lv <= 1)
+        {
+            return;
+        }
+
+        float cooldown = Random.Range(minCool,maxCool);
+
+        Invoke("Skill", cooldown);
+    }
+
+    public void Skill()
+    {
+        if(Lv == 2)
+        {
+            BossAnim.SetTrigger("skill");
+            
+        }
+    }
+
+    public void LV2Skill()
+    {
+        Instantiate(skillOj, point.position, Quaternion.identity);
     }
 
     public void Hit(int damage) //  대미지를 인수로 받도록 개선
@@ -111,8 +144,8 @@ public class Boss : MonoBehaviour
             HPbarSlider.value = 0;
         }
 
-        // BossAnim.SetTrigger("Die"); // 죽음 애니메이션 재생
-        // Destroy(gameObject, 3f); // 3초 후 오브젝트 파괴
+        BossAnim.SetTrigger("Die"); // 죽음 애니메이션 재생
+        Destroy(gameObject, 3f); // 3초 후 오브젝트 파괴
     }
 }
 

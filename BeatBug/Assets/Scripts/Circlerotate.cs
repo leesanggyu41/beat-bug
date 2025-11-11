@@ -42,10 +42,10 @@ public class Circlerotate : MonoBehaviour
         {
             return;
         }
-        //if (Input.GetKeyDown(KeyCode.R))
-        //{
-        //    isplay();
-        //}
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            isplay();
+        }
         if (isGo)
         {
             // A/D로 궤도 바꾸기

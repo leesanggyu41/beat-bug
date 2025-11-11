@@ -1887,12 +1887,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BossAnim: {fileID: 826156203}
-  paturns: []
   HPBarParent: {fileID: 0}
+  Lv: 0
   HPbarSlider: {fileID: 0}
   maxHp: 10
   currentHp: 0
   isDie: 0
+  maxCool: 0
+  minCool: 0
+  point: {fileID: 0}
+  skillOj: {fileID: 0}
 --- !u!95 &826156203
 Animator:
   serializedVersion: 7
@@ -2035,7 +2039,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 80c3ee364e1a72140a53506f187624bc, type: 3}
+  m_Resource: {fileID: 8300000, guid: bfd88338b503c0545a49c04c3802994a, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

@@ -222,10 +222,10 @@ TextureImporter:
         serializedVersion: 2
         x: 443
         y: 16
-        width: 111
-        height: 151
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 109
+        height: 149
+      alignment: 9
+      pivot: {x: 0.50353587, y: 0.53879935}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -242,12 +242,12 @@ TextureImporter:
       name: lv2-Sheet_7
       rect:
         serializedVersion: 2
-        x: 642
+        x: 643
         y: 18
-        width: 112
-        height: 148
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 109
+        height: 147
+      alignment: 9
+      pivot: {x: 0.5, y: 0.55243635}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -264,12 +264,12 @@ TextureImporter:
       name: lv2-Sheet_16
       rect:
         serializedVersion: 2
-        x: 44
+        x: 42
         y: 31
-        width: 119
-        height: 147
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 109
+        height: 134
+      alignment: 9
+      pivot: {x: 0.5046803, y: 0.50108105}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -334,8 +334,8 @@ TextureImporter:
         y: 89
         width: 7
         height: 11
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: -12.603849, y: 0.71022314}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -484,12 +484,12 @@ TextureImporter:
       name: lv2-Sheet_34
       rect:
         serializedVersion: 2
-        x: 240
+        x: 243
         y: 26
-        width: 114
-        height: 141
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 109
+        height: 139
+      alignment: 9
+      pivot: {x: 0.50353587, y: 0.51940894}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []

@@ -120,7 +120,7 @@ public class spikeEdier : MonoBehaviour
     public void reset()
     {
 #if UNITY_EDITOR
-        string prefabPath = "Assets/lv1/" + currentSpikeGroup.name + r + ".prefab";
+        string prefabPath = "Assets/lv2/" + currentSpikeGroup.name + r + ".prefab";
         r++;
 
         GameObject spikeGroupToSave = currentSpikeGroup;

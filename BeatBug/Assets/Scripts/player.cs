@@ -8,6 +8,7 @@ public class player : MonoBehaviour
     public Circlerotate circlerotate;
     public GameManager gameManager;
     public spikeEdier spikeedier;
+    private bool isAttacked;
 
     void Start()
     {
@@ -17,11 +18,18 @@ public class player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(isAttack && Input.GetKeyDown(KeyCode.Space))
+        if(isAttack && !isAttacked && Input.GetKeyDown(KeyCode.Space))
         {
             Boss.Hit(1);
+            isAttacked = true;
+            Invoke("rr", 0.1f);
         }
 
+    }
+
+    private void rr()
+    {
+        isAttacked = false;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -33,8 +41,8 @@ public class player : MonoBehaviour
         }
 
         if (collision.tag == "www")
-        { if(spikeedier != null)spikeedier.reset();
-            
+        {
+           if(spikeedier != null)spikeedier.reset();  
         }
 
     }

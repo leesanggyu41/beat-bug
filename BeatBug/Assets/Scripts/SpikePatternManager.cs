@@ -8,6 +8,7 @@ public class SpikePatternManager : MonoBehaviour
 
     public Transform spawnPoint; // 패턴 생성 위치
     public AudioSource bgm;
+    public Boss boss;
 
     void Start()
     {
@@ -35,7 +36,11 @@ public class SpikePatternManager : MonoBehaviour
         currentIndex++;
         if (currentIndex >= spikePatterns.Length) currentIndex = 0; // 반복 재생
         SpawnNextPattern();
-        if(currentIndex == 1) bgm.Play();
+        if (currentIndex == 1) 
+        {
+            bgm.Play();
+            boss.skillcool();
+        } 
     }
 
     void SpawnNextPattern()
