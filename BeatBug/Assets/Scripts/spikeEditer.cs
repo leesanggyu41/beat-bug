@@ -10,6 +10,7 @@ public class spikeEdier : MonoBehaviour
     public AudioSource audioSource;
     public int sampleSize = 1024;
     public float threshold = 1f;
+    public float max = 1000f;
 
     public int tr = 0;
     public int Randomm = 0;
@@ -76,7 +77,7 @@ public class spikeEdier : MonoBehaviour
             case 3: // 고음
                 float highSum = 0f;
                 for (int i = 201; i <= 512 && i < spectrum.Length; i++) highSum += spectrum[i];
-                freqValue = (highSum / 312f) * 1000f;
+                freqValue = (highSum / 312f) * max;
                 keyName = "고음";
                 break;
         }
@@ -120,7 +121,7 @@ public class spikeEdier : MonoBehaviour
     public void reset()
     {
 #if UNITY_EDITOR
-        string prefabPath = "Assets/lv2/" + currentSpikeGroup.name + r + ".prefab";
+        string prefabPath = "Assets/lv4/" + currentSpikeGroup.name + r + ".prefab";
         r++;
 
         GameObject spikeGroupToSave = currentSpikeGroup;

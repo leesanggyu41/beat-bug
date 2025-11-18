@@ -36,15 +36,16 @@ public class SpikePatternManager : MonoBehaviour
         currentIndex++;
         if (currentIndex >= spikePatterns.Length) currentIndex = 0; // 반복 재생
         SpawnNextPattern();
-        if (currentIndex == 1) 
+        if (currentIndex == 1)
         {
             bgm.Play();
             boss.skillcool();
-        } 
+        }
     }
-
-    void SpawnNextPattern()
-    {
-        currentPatternInstance = Instantiate(spikePatterns[currentIndex]);
-    }
+        void SpawnNextPattern()
+        {
+            currentPatternInstance = Instantiate(spikePatterns[currentIndex], new Vector3 (spawnPoint.position.x,-2f,0f), Quaternion.identity);
+            currentPatternInstance.transform.SetParent(spawnPoint);
+        }
+    
 }

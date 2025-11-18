@@ -2039,7 +2039,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: bfd88338b503c0545a49c04c3802994a, type: 3}
+  m_Resource: {fileID: 8300000, guid: 6eb4f746186253447bee88edffbb3ef9, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -2176,6 +2176,7 @@ MonoBehaviour:
   audioSource: {fileID: 872396608}
   sampleSize: 1024
   threshold: 1
+  max: 1500
   tr: 0
   Randomm: 0
   spike:
@@ -2183,7 +2184,7 @@ MonoBehaviour:
   - {fileID: 8191226798160055078, guid: b511daa9637672645a0c6a214706a880, type: 3}
   attackzone: {fileID: 8284392199800411706, guid: dce8efe0d6c3ed147a02b9e18ef5359f, type: 3}
   spikeposition: {fileID: 83690744}
-  spawnCooldown: 0.5
+  spawnCooldown: 0.2
   circle: {fileID: 617484362}
   point: {fileID: 0}
   newpaturn: {fileID: 7905886111375513478, guid: cfbe2e304f50c3046bc6af60d66cfdba, type: 3}
