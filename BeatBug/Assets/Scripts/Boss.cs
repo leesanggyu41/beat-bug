@@ -85,7 +85,10 @@ public class Boss : MonoBehaviour
         {
             Die();
         }
-
+        if(Input.GetKeyDown(KeyCode.P))
+        {
+            currentHp = 1;
+        }
 
     }
     public void skillcool()
@@ -146,7 +149,7 @@ public class Boss : MonoBehaviour
     }
     public void LV4Skill2_1()
     {
-        originalPos = Center.transform.localPosition; // 현재 위치를 원본으로 저장
+        originalPos = new Vector3(0,-2,0); // 현재 위치를 원본으로 저장
 
         // 오른쪽(X축 양의 방향)으로 밀기
         Vector3 targetPos = originalPos + Vector3.right * pushDistance;
@@ -338,18 +341,28 @@ public class Boss : MonoBehaviour
         }
 
         BossAnim.SetTrigger("Die"); // 죽음 애니메이션 재생
-        Invoke("nextLv", 2);
+        if(Lv == 4)
+        {
+            Invoke("nextLv", 15);
+        }
+        else
+        {
+            Invoke("nextLv", 5);                
+        }
+
+        
     }
 
     void nextLv()
     {
         next.SetActive(true);
-        Invoke("nextt",2);
+        Invoke("nextt",5);
     }
 
     void nextt()
     {
-        SceneManager.LoadScene("LV" + Lv+1);
+        Lv += 1;
+        SceneManager.LoadScene("LV" + Lv);
     }
 }
 

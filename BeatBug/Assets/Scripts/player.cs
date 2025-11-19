@@ -34,11 +34,11 @@ public class player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //if (collision.tag == "Eneny")
-        //{
-        //    circlerotate.isDie = true;
-        //    gameManager.playerDie();
-        //}
+        if (collision.tag == "Eneny")
+        {
+            circlerotate.isDie = true;
+            gameManager.playerDie();
+        }
 
         if (collision.tag == "www")
         {

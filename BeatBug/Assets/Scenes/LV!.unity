@@ -2307,7 +2307,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BossAnim: {fileID: 826156203}
   HPBarParent: {fileID: 694180990}
-  Lv: 0
+  Lv: 1
   HPbarSlider: {fileID: 694180992}
   maxHp: 3
   currentHp: 0
@@ -2635,7 +2635,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &979260771
 RectTransform:
   m_ObjectHideFlags: 0
