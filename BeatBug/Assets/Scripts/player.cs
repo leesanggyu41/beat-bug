@@ -9,6 +9,7 @@ public class player : MonoBehaviour
     public GameManager gameManager;
     public spikeEdier spikeedier;
     private bool isAttacked;
+    private bool isin;
 
     void Start()
     {
@@ -24,6 +25,10 @@ public class player : MonoBehaviour
             isAttacked = true;
             Invoke("rr", 0.1f);
         }
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            isin = !isin;
+        }
 
     }
 
@@ -34,7 +39,7 @@ public class player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Eneny")
+        if (collision.tag == "Eneny" && !isin)
         {
             circlerotate.isDie = true;
             gameManager.playerDie();

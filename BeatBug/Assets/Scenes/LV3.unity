@@ -3922,8 +3922,8 @@ MonoBehaviour:
   maxHp: 20
   currentHp: 0
   isDie: 0
-  maxCool: 60
-  minCool: 30
+  maxCool: 6
+  minCool: 5
   pushDistance: 1.5
   moveDuration: 0.2
   kill3Dis: 5
